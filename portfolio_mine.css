@@ -1,0 +1,211 @@
+/***** GENERAL STYLING *****/
+
+:root {
+    --seafoam: #def3f6;
+    --darksea: rgb(0, 60, 95);
+    --lightsea: #76b6c4;
+    /* Set variables for easy color usage in multiple locations */
+}
+
+body {
+    margin: 0%;
+    max-width: 100%;
+    /* used to fix overflowing box elements */
+    background-color: var(--darksea);
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+p, label, footer {
+    font-family: 'Oswald', sans-serif;
+    font-size: x-large;
+}
+
+input {
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+}
+
+footer {
+    color: var(--lightsea);
+    text-align: center;
+}
+
+/***** END OF GENERAL STYLING *****/
+
+/***** NAVBAR STYLING *****/
+
+.navbar {
+    background-color: var(--darksea);
+    padding-left: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #76b6c4;
+    text-decoration: none;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-right: 3px solid var(--seafoam);
+}
+
+.navbar a:hover {
+    background-color: #76b6c4;
+    color: rgb(0, 60, 95);
+    transition: ease-in-out;
+    transition-duration: .5s;
+}
+
+/***** END OF NAVBAR STYLING *****/
+
+/***** VIDEO STYLING *****/
+
+.video-banner { /*Contains both the video and the overlay text */
+    width: 100%;
+    height: 500px;
+}
+
+.video-container {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+}
+
+video {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text-container {
+    background: rgba(0, 60, 95, 0.4);
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.overlay-text {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    color: var(--seafoam);
+}
+
+.overlay-text p {
+    margin-top: -50px;
+}
+
+.overlay-text h1 {
+    font-size: 5rem;
+    letter-spacing: 5px;
+}
+
+.overlay:hover {
+    background: rgba(0, 60, 95, 0.7);
+    transition: ease-in-out;
+    transition-duration: .7s;
+}
+
+/***** END VIDEO STYLING *****/
+
+/***** GRID STYLING *****/
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 20px;
+    padding-top: 40px;
+    grid-gap: 20px;
+    background-color: var(--darksea);
+    color: #444;
+}
+
+.zoom-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(0, 60, 95, 0.4)
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--seafoam);
+    color: var(--darksea);
+    border-radius: 5px;
+    max-width: 100%;
+    padding: 40px;
+    font-size: 150%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.b a {
+    font-family: 'Oswald', sans-serif;
+    font-size: x-large;
+    padding: 0;
+    /* removes padding from link in 'About' paragraph */
+}
+
+/***** FORM STYLING *****/
+
+input[type=text], select {
+    color: var(--darksea);
+    width: 75%;
+    padding: 12px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+input[type=text]:hover {
+    border: 1px solid rgba(26, 54, 70, 0.9);
+}
+
+input[type=submit] {
+    width: 75%;
+    background-color: var(--darksea);
+    color: var(--seafoam);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(26, 54, 70, 0.9);
+}
+
+/***** END FORM AND GRID STYLING *****/

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./portfolio_mine.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&;700display=swap"
+        rel="stylesheet">
+    <!-- Adds custom google font -->
+
+    <title>Taylor Peters' Portfolio</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#github">GITHUB</a>
+        <a href="#contact">CONTACT</a>
+    </div><!-- .navbar -->
+
+    <div class="video-banner">
+        <div class="video-container">
+            <video src="./images/video.mp4" autoplay muted loop></video>
+            <!-- waves video -->
+
+        </div>
+        <div class="text-container">
+            <div class = "overlay-text">
+            <h1 id="home">TAYLOR PETERS' PORTFOLIO</h1>
+            <p> "I do not fear computers. I fear the lack of them."<br>-Isaac Asimov</p>
+            </div><!-- .overlay-text -->
+        </div><!-- .video-container -->
+    </div><!-- .home -->
+    
+
+    <div class="wrapper">
+        <div class="box a">
+            <div class="zoom-box">
+                <img src="./images/technology.jpg" alt="technology">
+            </div><!-- .zoom-box -->
+        </div><!-- .box a -->
+
+        <div class="box b">
+            <h1 id="about">About</h1>
+            <p>I am excited to jump into the tech world!  With the ever-changing landscape, I look forward
+                to constantly encountering new challenges. <br> After graduating from <a href="https://www.learncodinganywhere.com">The Tech Academy</a> 
+                I plan to immediately enter the work force.</p>
+        </div><!-- .box b -->
+
+        <div class="box c">
+            <h1 id="github">GITHUB</h1>
+            <p>You can view my coding projects on my GitHub profile here:</p>
+           <a href="https://github.com/taylor-peters"> Taylor Peters' Github</a> 
+        </div><!-- .box c -->
+
+        <div class="box d">
+            <div class="zoom-box">
+                <img src="./images/github.jpg" alt="GitHub">
+            </div>
+        </div><!-- .box d -->
+
+        <div class="box e">
+            <div class="zoom-box">
+                <img src="./images/contact.jpg" alt="Contact">
+            </div>
+        </div><!-- .box e -->
+
+        <div class="box f">
+            <form id="contact">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+            
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email..">
+            
+                <label for="message">Message</label>
+                <input type="text" id="msg" name="mdg" placeholder="Message..">
+                <input type="submit" value="Submit">
+            </form>
+        </div><!-- .box f -->
+
+    </div><!-- .wrapper -->
+
+    <footer>
+        <h3>&copy;  Taylor Peters Digital Solutions 2021</h3>
+    </footer>
+
+</body>
+
+</html>
