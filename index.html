@@ -8,8 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./portfolio_mine.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&;700display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&;700display=swap" rel="stylesheet">
     <!-- Adds custom google font -->
 
     <title>Taylor Peters' Portfolio</title>
@@ -25,18 +24,95 @@
 
     <div class="video-banner">
         <div class="video-container">
-            <video src="./images/Video.mp4" autoplay muted loop></video>
+            <video src="./images/video.mp4" autoplay muted loop></video>
             <!-- waves video -->
 
         </div>
         <div class="text-container">
-            <div class = "overlay-text">
-            <h1 id="home">TAYLOR PETERS' PORTFOLIO</h1>
-            <p> "I do not fear computers. I fear the lack of them."<br>-Isaac Asimov</p>
+            <div class="overlay-text">
+                <h1 id="home">TAYLOR PETERS' PORTFOLIO</h1>
+                <h2> "I do not fear computers. I fear the lack of them."<br>-Isaac Asimov</h2>
             </div><!-- .overlay-text -->
         </div><!-- .video-container -->
     </div><!-- .home -->
-    
+
+    <section>
+        <div id="gallery">
+            <div class="image-grid">
+                <div class="container" onclick="openModal();currentSlide(1)">
+                    <img src="./images/personal_1.JPG" alt="Crater Lake" width="400" height="300">
+                </div>
+                <div class="container" onclick="openModal();currentSlide(2)">
+                    <img src="./images/personal_2.JPG" alt="Denali" width="400" height="300">
+                </div>
+                <div class="container" onclick="openModal();currentSlide(3)">
+                    <img src="./images/personal_3.png" alt="Glacier Bay" width="400" height="300">
+                </div>
+                <div class="container" onclick="openModal();currentSlide(4)">
+                    <img src="./images/personal_4.JPG" alt="Death Valley" width="400" height="300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="./images/personal_1.JPG" style="width: 100%; height: 750px; object-fit: cover;">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="./images/personal_2.JPG" style="width: 100%; height: 750px; object-fit: cover;">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="./images/personal_3.png" style="width: 100%; height: 750px; object-fit: cover;">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="./images/personal_4.JPG" style="width: 100%; height: 750px; object-fit: cover;">
+            </div>
+
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="column">
+                <img class="demo" src="./images/personal_1.JPG" onclick="currentSlide(1)" alt="I moved to 
+                Portland in 2008 to play hockey for the Portland Winterhawks">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="./images/personal_2.JPG" onclick="currentSlide(2)" alt="After five years
+                in Portland, I got the chance to play professionally in Texas.">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="./images/personal_3.png" onclick="currentSlide(3)" alt="After playing professionally,
+                I moved back to Portland and started coaching youth hockey, opening the Taylor Peters Hockey School (www.taylorpetershockeyschool.com)">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="./images/personal_4.JPG" onclick="currentSlide(4)" alt="After getting married
+                in 2015, my wife and I welcomed our son, Lennon, into the world in 2017">
+            </div>
+
+        </div>
+    </div>
+
 
     <div class="wrapper">
         <div class="box a">
@@ -47,15 +123,16 @@
 
         <div class="box b">
             <h1 id="about">About</h1>
-            <p>I am excited to jump into the tech world!  With the ever-changing landscape, I look forward
-                to constantly encountering new challenges. <br> After graduating from <a href="https://www.learncodinganywhere.com">The Tech Academy</a> 
+            <p>I am excited to jump into the tech world! With the ever-changing landscape, I look forward
+                to constantly encountering new challenges. <br> After graduating from <a
+                    href="https://www.learncodinganywhere.com">The Tech Academy</a>
                 I plan to immediately enter the work force.</p>
         </div><!-- .box b -->
 
         <div class="box c">
             <h1 id="github">GITHUB</h1>
             <p>You can view my coding projects on my GitHub profile here:</p>
-           <a href="https://github.com/taylor-peters"> Taylor Peters' Github</a> 
+            <a href="https://github.com/taylor-peters"> Taylor Peters' Github</a>
         </div><!-- .box c -->
 
         <div class="box d">
@@ -64,31 +141,36 @@
             </div>
         </div><!-- .box d -->
 
-        <div class="box e">
-            <div class="zoom-box">
-                <img src="./images/contact.jpg" alt="Contact">
-            </div>
-        </div><!-- .box e -->
-
-        <div class="box f">
-            <form id="contact">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name..">
-            
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Your email..">
-            
-                <label for="message">Message</label>
-                <input type="text" id="msg" name="mdg" placeholder="Message..">
-                <input type="submit" value="Submit">
-            </form>
-        </div><!-- .box f -->
 
     </div><!-- .wrapper -->
 
     <footer>
-        <h3>&copy;  Taylor Peters Digital Solutions 2021</h3>
+        <div class="center-box">
+            <h3 id="footer-text">&copy; Taylor Peters Digital Solutions 2021</h3>
+
+            <button class="contact-button" onclick=openForm()>Contact Me</button>
+
+            <div class="form-popup" id="myForm">
+                <form class="form-container" action="https://formspree.io/f/moqrarna" method="POST">
+                    <h1>Contact Me</h1>
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+                    <label for="message">Message</label>
+                    <input type="text" id="message" name="message" placeholder="Your message.." required>
+
+                    <button type="submit" class="btn submit">Submit</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
     </footer>
+
+    <script src="./JS/main.js"></script>
 
 </body>
 
