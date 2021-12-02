@@ -507,31 +507,45 @@ input[type=text], input[type=email] {
     }
 }
 
-
-
-/*Media rule for navbar links for different screen sizes*/
-/* Screens 1080px and smaller will display navbar links equally distributed */
-@media screen and (max-width: 1080px) {
-    .Navbar a {
-        width: 20%;
-        /* This sets each navbar link to 1/5 of the navbar */
-        font-size: 2.5vw;
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+    .image-grid {
+    --num-cols: 1;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+    .image-grid {
+    --num-cols: 2;
+    }
+}
+@media screen and (min-width: 1300px) and (max-width: 1700px) {
+    .image-grid {
+    --num-cols: 3;
     }
 }
 
-/* Media rules to increase the size of the columns for larger screens */
-@media screen and (min-width: 1725px) {
-    .box {
-        height: 550px;
+    /*Media rule for navbar links for different screen sizes*/
+    /* Screens 1080px and smaller will display navbar links equally distributed */
+    @media screen and (max-width: 1080px) {
+        .Navbar a {
+            width: 20%;
+            /* This sets each navbar link to 1/5 of the navbar */
+            font-size: 2.5vw;
+        }
     }
-}
 
-
-/*Media rule to remove margin-top from h1 elements for extra large screens (so that the paragraph text fits in the column*/
-@media screen and (min-width: 2000px) {
-    h1 {
-        margin-top: 0;
+    /* Media rules to increase the size of the columns for larger screens */
+    @media screen and (min-width: 1725px) {
+        .box {
+            height: 550px;
+        }
     }
-}
 
-/***** End of Media Query Section *****/
+
+    /*Media rule to remove margin-top from h1 elements for extra large screens (so that the paragraph text fits in the column*/
+    @media screen and (min-width: 2000px) {
+        h1 {
+            margin-top: 0;
+        }
+    }
+
+    /***** End of Media Query Section *****/
