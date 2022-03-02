@@ -37,6 +37,10 @@ p, a, label, footer {
     font-family: 'Oswald', sans-serif;
     font-size: x-large;
 }
+ 
+a {
+    margin-right: 10px;
+}
 
 input {
     font-family: 'Oswald', sans-serif;
